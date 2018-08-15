@@ -17,3 +17,15 @@ copper_t* Copper_new_copy(copper_t* ct)
 	Copper_util_copy_i32(COPPER_T_BEGIN(new_cop), COPPER_T_BEGIN(ct), COPPER_T_SIZE(ct));
 	return new_cop;	
 }
+
+
+copper_t* Copper_replace(copper_t* ct)
+{
+	copper_t* new_cop = COPPER_T_ALLOC(ct->data[0]);
+	new_cop->data[0] = ct->data[0];
+	Copper_util_copy_i32(COPPER_T_BEGIN(new_cop), COPPER_T_BEGIN(ct), COPPER_T_SIZE(ct));
+	// Deletes the old copper_t
+	ct->data[0] = 0;
+	COPPER_T_DEL(ct);
+	return new_cop;	
+}

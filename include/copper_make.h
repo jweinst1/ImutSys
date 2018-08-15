@@ -12,6 +12,11 @@
   */
 copper_t* Copper_new(int32_t size);
 
+/* Creates a new copy of the copper_t ct
+* Does not destroy the old copy
+*/
 copper_t* Copper_new_copy(copper_t* ct);
+
+copper_t* Copper_replace(copper_t* ct);
 
 #endif //COPPER_MAKE_H
