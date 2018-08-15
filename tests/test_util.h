@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#define TEST_IS_EQ(name, result, expected) puts(name); \
+#define TEST_IS_EQ(name, result, expected) puts("~~~~~~~~"); puts(name); \
                                            if(result == expected) printf("test PASSED\n"); \
                                            else printf("test FAILED\n")
 

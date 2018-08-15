@@ -5,6 +5,7 @@ project(Copper)
 ######Warlock core source files#######
 SET(core_files
     src/Copper.c
+    src/copper_make.c
 )
 
 ####### Copper Libraries ########

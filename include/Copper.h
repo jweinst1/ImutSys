@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int Copper_new_int(int num);
+#include "copper_types.h"
+#include "copper_make.h"
 
 #endif // LIB_COPPER_H
