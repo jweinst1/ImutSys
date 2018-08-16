@@ -1,2 +1,2 @@
 # Copper
-An immutable, binary data interchange system and language
+A fixed size, binary data interchange system and language

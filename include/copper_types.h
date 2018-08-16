@@ -22,13 +22,17 @@
 #define COPPER_T_BEGIN(ct) (ct->data + 1)
 // Macro that corresponds to the end point of the data body in a copper_t
 #define COPPER_T_END(ct) (ct->data + ct->data[0] + 1)
+// Macro that expands to an i32 offset in the data body of copper_t
+#define COPPER_T_OFFSET(ct, i) (ct->data + i + 1)
+// Macro to allow random access of copper_t data body
+#define COPPER_T_AT(ct, i) (ct->data[i + 1])
 // Equality check if a copper_t is a specific kind
 #define COPPER_T_IS_KIND(ct, k) (ct->data[0] == k)
 
 // Enum to represent type markers that are prefixed to Copper formatted data
 typedef enum
 {
-	copper_kind_int
+	copper_kind_bool
 } copper_kind;
 
 /* copper_t struct

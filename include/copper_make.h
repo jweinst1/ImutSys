@@ -17,6 +17,19 @@ copper_t* Copper_new(int32_t size);
 */
 copper_t* Copper_new_copy(copper_t* ct);
 
+/* Copper Slicing
+* Creates new copper_t from slice of existing copper_t
+*/
+copper_t* Copper_new_slice(copper_t* ct, int32_t start, int32_t end);
+
+/* Copper_replace
+* Makes a new copy of ct and then destroys ct.
+*/
 copper_t* Copper_replace(copper_t* ct);
+
+/* Copper_write
+* Writes data in doc into existing copper_t, at position pos
+*/
+void Copper_write(copper_t* ct, int32_t* doc, int32_t pos, int32_t size);
 
 #endif //COPPER_MAKE_H
